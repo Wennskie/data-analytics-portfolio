@@ -86,5 +86,5 @@ Bachelor of Computer Science, Database Technology
 ## Contact
 
 - GitHub: [@Wennskie](https://github.com/Wennskie)
-- LinkedIn: [@owenelden](https://www.linkedin.com/in/owen-elden-662a012b1/)
+- LinkedIn: [@owenelden](https://www.linkedin.com/in/owen-elden)
 - Email: owenelden06@gmail.com
