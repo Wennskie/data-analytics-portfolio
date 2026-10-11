@@ -1,4 +1,4 @@
-<h1 align="center">Owen Elden | Data Analytics Portfolio</h1>
+<h1 align="center">Owen Elden | Data Portfolio</h1>
 
 <p align="center"><i>From raw tables to answers people can use.</i></p>
 
@@ -30,10 +30,24 @@ A guided capstone where I played the role of a hospital data analyst. Three team
 | | |
 | --- | --- |
 | **Goal** | Answer real business questions from a hospital's data, the way an analyst would for different teams |
-| **Data** | A hospital database provided with the case, with four tables: patients, doctors, visits, and diagnoses |
+| **Data** | A hospital database provided with the case: 30 patients, 12 doctors, 55 visits, and 45 diagnoses |
 | **Tools** | SQL (DuckDB) |
-| **Skills** | Conditional logic (`CASE WHEN`), joins, aggregation, `HAVING`, scoring and segmentation |
-| **Code** | [`hospital-case-study.sql`](https://github.com/Wennskie/portfolio-projects/blob/main/hospital-case-study.sql) |
+| **Skills** | Conditional logic (`CASE WHEN`), inner and left joins, aggregation, `HAVING`, NULL handling (`COALESCE`, `NULLIF`), scoring and segmentation |
+| **Code** | [`hospital-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/hospital-case-study.sql) |
+
+<details>
+<summary><b>Dataset schema (click to expand)</b></summary>
+
+| Table | Rows | Columns |
+| --- | --- | --- |
+| `pasien` (patients) | 30 | `id`, `nama`, `umur`, `jenis_kelamin`, `kota`, `no_asuransi` (NULL means self-paying) |
+| `dokter` (doctors) | 12 | `id`, `nama`, `spesialisasi`, `tahun_pengalaman` |
+| `kunjungan` (visits) | 55 | `id`, `pasien_id`, `dokter_id`, `tanggal_kunjungan` (TEXT, YYYY-MM-DD), `tipe_kunjungan` (Rawat Jalan, Rawat Inap, or IGD), `biaya` (0 means subsidized), `lama_inap_hari`, `triase_level` (1 to 5, ER visits only) |
+| `diagnosa` (diagnoses) | 45 | `id`, `kunjungan_id`, `kode_icd`, `nama_diagnosa`, `tingkat_keparahan` (Ringan, Sedang, or Berat) |
+
+The dataset itself is not included in this repository. The schema above shows the structure the queries are written for.
+
+</details>
 
 <details>
 <summary><b>The three scenarios (click to expand)</b></summary>
