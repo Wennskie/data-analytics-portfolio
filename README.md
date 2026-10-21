@@ -14,6 +14,7 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
 - [Proyek Portofolio](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#proyek-portofolio)
   - SQL
     - [Studi Kasus Analitik Rumah Sakit](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-rumah-sakit)
+    - [Studi Kasus Analitik Platform E-Learning](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-platform-e-learning)
 - [Selanjutnya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#selanjutnya)
 - [Pendidikan](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#pendidikan)
 - [Sertifikat](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#sertifikat)
@@ -66,6 +67,57 @@ Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan strukt
 - Profil pasien dan program yang cocok
 - Skor keparahan dan daftar tindak lanjut
 - Ringkasan eksekutif per kelompok umur
+
+</details>
+
+### Studi Kasus Analitik Platform E-Learning
+
+Studi kasus terpandu di mana saya berperan sebagai analis baru di sebuah platform e-learning. Tiga pimpinan mengirimkan brief, lalu saya menjawabnya dengan query SQL yang menggabungkan banyak tabel.
+
+| | |
+| --- | --- |
+| **Tujuan** | Menjawab pertanyaan manajemen platform e-learning, mulai dari laporan pendaftaran, evaluasi instruktur, sampai ringkasan eksekutif |
+| **Data** | Database platform e-learning yang disediakan bersama kasusnya: 10 mahasiswa, 5 instruktur, 4 kategori, 8 kursus, 17 pendaftaran, dan 13 review |
+| **Tools** | SQL |
+| **Skill** | Multi-table JOIN (inner dan left), anti-join, agregasi kondisional, `HAVING`, derived table dan `CROSS JOIN`, CTE, fungsi tanggal (`CAST`, `DATEDIFF`) |
+| **Kode** | [`elearning-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/elearning-case-study.sql) |
+
+<details>
+<summary><b>Skema dataset (klik untuk membuka)</b></summary>
+
+| Tabel | Baris | Kolom |
+| --- | --- | --- |
+| `mahasiswa` | 10 | `id`, `nama`, `kota`, `email`, `tanggal_daftar` (TEXT) |
+| `instruktur` | 5 | `id`, `nama`, `spesialisasi`, `tahun_bergabung` |
+| `kategori_kursus` | 4 | `id`, `nama_kategori` (Data, Programming, Bisnis, Desain), `deskripsi` |
+| `kursus` | 8 | `id`, `judul`, `instruktur_id`, `kategori_id`, `harga`, `level` (pemula, menengah, lanjutan), `is_aktif` |
+| `pendaftaran` | 17 | `id`, `mahasiswa_id`, `kursus_id`, `tanggal_daftar`, `status` (aktif, selesai, atau batal), `nilai` (NULL jika belum selesai atau batal) |
+| `review` | 13 | `id`, `mahasiswa_id`, `kursus_id`, `rating` (1 sampai 5), `komentar`, `tanggal` |
+
+Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan struktur tabel yang dipakai oleh query.
+
+</details>
+
+<details>
+<summary><b>Tiga skenario (klik untuk membuka)</b></summary>
+
+**1. Laporan Semester** (brief dari Kepala Akademik)
+- Ringkasan pendaftaran per kursus
+- Pendaftaran per kategori
+- Kursus sepi pendaftaran
+- Mahasiswa tanpa aktivitas
+
+**2. Evaluasi Instruktur** (brief dari Head of People)
+- Scorecard instruktur
+- Completion rate per instruktur
+- Perbandingan jumlah mahasiswa per kursus
+- Instruktur dengan rating di atas rata-rata
+
+**3. Laporan Eksekutif** (brief dari CEO)
+- Revenue per kategori dan level
+- Top 3 mahasiswa paling aktif
+- Kursus yang perlu perhatian
+- Executive summary per kategori
 
 </details>
 
