@@ -15,6 +15,7 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
   - SQL
     - [Studi Kasus Analitik Rumah Sakit](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-rumah-sakit)
     - [Studi Kasus Analitik Platform E-Learning](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-platform-e-learning)
+    - [Studi Kasus Analitik Marketplace E-Commerce](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-marketplace-e-commerce)
 - [Selanjutnya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#selanjutnya)
 - [Pendidikan](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#pendidikan)
 - [Sertifikat](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#sertifikat)
@@ -118,6 +119,58 @@ Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan strukt
 - Top 3 mahasiswa paling aktif
 - Kursus yang perlu perhatian
 - Executive summary per kategori
+
+</details>
+
+### Studi Kasus Analitik Marketplace E-Commerce
+
+Studi kasus terpandu di mana saya berperan sebagai data analyst di sebuah marketplace e-commerce. Berbagai tim (CRM, Retention, Finance, Inventory, sampai CEO) mengirimkan permintaan, lalu saya menjawabnya dengan subquery dan CTE.
+
+| | |
+| --- | --- |
+| **Tujuan** | Menjawab pertanyaan dari berbagai tim di marketplace e-commerce, mulai dari analisis pelanggan dan penjual, produk dan kategori, sampai laporan manajemen |
+| **Data** | Database marketplace e-commerce yang disediakan bersama kasusnya, berisi data pelanggan, penjual, produk, kategori, pesanan, detail pesanan, dan review |
+| **Tools** | SQL |
+| **Skill** | Subquery (di `WHERE`, `SELECT`, dan `FROM`), correlated subquery, CTE, recursive CTE, `EXISTS` dan `NOT EXISTS`, `CROSS JOIN`, running total, fungsi tanggal (`CAST`, `INTERVAL`, `strftime`) |
+| **Kode** | [`marketplace-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/marketplace-case-study.sql) |
+
+<details>
+<summary><b>Kolom yang dipakai (klik untuk membuka)</b></summary>
+
+| Tabel | Kolom yang dipakai |
+| --- | --- |
+| `pelanggan` | `id`, `nama`, `kota`, `tanggal_daftar` (TEXT) |
+| `penjual` | `id`, `nama`, `kota`, `referrer_id` (NULL berarti penjual root) |
+| `produk` | `id`, `nama_produk`, `penjual_id`, `kategori_id`, `harga`, `stok`, `is_aktif` |
+| `kategori` | `id`, `nama_kategori`, `parent_id` (NULL berarti kategori root) |
+| `pesanan` | `id`, `pelanggan_id`, `tanggal_pesanan` (TEXT), `status`, `total` |
+| `detail_pesanan` | `pesanan_id`, `produk_id`, `jumlah`, `harga_satuan` |
+| `review` | `id`, `produk_id`, `rating` |
+
+Dataset-nya tidak disertakan di repositori ini. Tabel di atas menunjukkan struktur yang dipakai oleh query.
+
+</details>
+
+<details>
+<summary><b>Tiga skenario (klik untuk membuka)</b></summary>
+
+**1. Analisis Pelanggan dan Penjual**
+- Segmentasi pelanggan berdasarkan spending
+- Ranking penjual berdasarkan revenue
+- Pelanggan tidak aktif
+- Referral chain penjual
+
+**2. Analisis Produk dan Kategori**
+- Produk terlaris per kategori
+- Revenue per kategori root
+- Produk stok tinggi tapi penjualan rendah
+- Rating review dan penjualan
+
+**3. Laporan Manajemen**
+- Trend bulanan dengan running total
+- Scorecard penjual
+- Cohort pelanggan berdasarkan bulan registrasi
+- Ringkasan eksekutif marketplace
 
 </details>
 
