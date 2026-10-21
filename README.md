@@ -1,89 +1,89 @@
-<h1 align="center">Owen Elden | Data Portfolio</h1>
+<h1 align="center">Owen Elden | Data Portofolio</h1>
 
-<p align="center"><i>From raw tables to answers people can use.</i></p>
+<p align="center"><i>Dari tabel mentah menjadi jawaban yang berguna.</i></p>
 
-## About
+## Tentang Saya
 
-Hi, I'm Owen! I'm a Computer Science student at BINUS University, specializing in Database Technology. My coursework and self-study have given me a solid foundation in working with data, from writing SQL queries to turning raw tables into clear, usable insights.
+Halo, saya Owen! Saya mahasiswa Ilmu Komputer di BINUS University dengan jalur Database Technology. Lewat perkuliahan dan belajar mandiri, saya membangun fondasi yang kuat dalam mengolah data, mulai dari menulis query SQL hingga mengubah tabel mentah menjadi insight yang jelas dan bermanfaat.
 
-I'm passionate about data and eager to apply my skills in a real-world setting through an internship. This repository is where I showcase my projects and keep track of my progress in data-related topics.
+Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja nyata melalui program magang. Repositori ini adalah tempat saya menampilkan proyek sekaligus mencatat perkembangan saya di topik-topik terkait data.
 
-## Table of Contents
+## Daftar Isi
 
-- [About](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#about)
-- [Portfolio Projects](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#portfolio-projects)
+- [Tentang Saya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#tentang-saya)
+- [Proyek Portofolio](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#proyek-portofolio)
   - SQL
-    - [Hospital Analytics Case Study](https://github.com/Wennskie/data-analytics-portfolio#hospital-analytics-case-study)
-- [Next Up](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#next-up)
-- [Education](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#education)
-- [Certificates](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#certificates)
-- [Contact](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#contact)
+    - [Studi Kasus Analitik Rumah Sakit](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-rumah-sakit)
+- [Selanjutnya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#selanjutnya)
+- [Pendidikan](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#pendidikan)
+- [Sertifikat](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#sertifikat)
+- [Kontak](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#kontak)
 
-## Portfolio Projects
+## Proyek Portofolio
 
-Every project here starts with a question and ends with something a decision-maker could actually use.
+Setiap proyek di sini berawal dari sebuah pertanyaan dan berakhir dengan sesuatu yang benar-benar bisa dipakai untuk mengambil keputusan.
 
-### Hospital Analytics Case Study
+### Studi Kasus Analitik Rumah Sakit
 
-A guided capstone where I played the role of a hospital data analyst. Three teams each sent me a short brief, and I answered them with SQL.
+Studi kasus terpandu di mana saya berperan sebagai analis data rumah sakit. Tiga tim mengirimkan brief singkat, lalu saya menjawabnya dengan SQL.
 
 | | |
 | --- | --- |
-| **Goal** | Answer real business questions from a hospital's data, the way an analyst would for different teams |
-| **Data** | A hospital database provided with the case: 30 patients, 12 doctors, 55 visits, and 45 diagnoses |
-| **Tools** | SQL (DuckDB) |
-| **Skills** | Conditional logic (`CASE WHEN`), inner and left joins, aggregation, `HAVING`, NULL handling (`COALESCE`, `NULLIF`), scoring and segmentation |
-| **Code** | [`hospital-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/hospital-case-study.sql) |
+| **Tujuan** | Menjawab pertanyaan bisnis nyata dari data rumah sakit, seperti yang dilakukan seorang analis untuk tim yang berbeda |
+| **Data** | Database rumah sakit yang disediakan bersama kasusnya: 30 pasien, 12 dokter, 55 kunjungan, dan 45 diagnosa |
+| **Tools** | SQL |
+| **Skill** | Logika kondisional (`CASE WHEN`), inner dan left join, agregasi, `HAVING`, penanganan NULL (`COALESCE`, `NULLIF`), scoring dan segmentasi |
+| **Kode** | [`hospital-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/hospital-case-study.sql) |
 
 <details>
-<summary><b>Dataset schema (click to expand)</b></summary>
+<summary><b>Skema dataset (klik untuk membuka)</b></summary>
 
-| Table | Rows | Columns |
+| Tabel | Baris | Kolom |
 | --- | --- | --- |
-| `pasien` (patients) | 30 | `id`, `nama`, `umur`, `jenis_kelamin`, `kota`, `no_asuransi` (NULL means self-paying) |
-| `dokter` (doctors) | 12 | `id`, `nama`, `spesialisasi`, `tahun_pengalaman` |
-| `kunjungan` (visits) | 55 | `id`, `pasien_id`, `dokter_id`, `tanggal_kunjungan` (TEXT, YYYY-MM-DD), `tipe_kunjungan` (Rawat Jalan, Rawat Inap, or IGD), `biaya` (0 means subsidized), `lama_inap_hari`, `triase_level` (1 to 5, ER visits only) |
-| `diagnosa` (diagnoses) | 45 | `id`, `kunjungan_id`, `kode_icd`, `nama_diagnosa`, `tingkat_keparahan` (Ringan, Sedang, or Berat) |
+| `pasien` | 30 | `id`, `nama`, `umur`, `jenis_kelamin`, `kota`, `no_asuransi` (NULL berarti bayar mandiri) |
+| `dokter` | 12 | `id`, `nama`, `spesialisasi`, `tahun_pengalaman` |
+| `kunjungan` | 55 | `id`, `pasien_id`, `dokter_id`, `tanggal_kunjungan` (TEXT, YYYY-MM-DD), `tipe_kunjungan` (Rawat Jalan, Rawat Inap, atau IGD), `biaya` (0 berarti subsidi), `lama_inap_hari`, `triase_level` (1 sampai 5, hanya untuk IGD) |
+| `diagnosa` | 45 | `id`, `kunjungan_id`, `kode_icd`, `nama_diagnosa`, `tingkat_keparahan` (Ringan, Sedang, atau Berat) |
 
-The dataset itself is not included in this repository. The schema above shows the structure the queries are written for.
+Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan struktur tabel yang dipakai oleh query.
 
 </details>
 
 <details>
-<summary><b>The three scenarios (click to expand)</b></summary>
+<summary><b>Tiga skenario (klik untuk membuka)</b></summary>
 
-**1. ER Operations Dashboard** (brief from the Operations Manager)
-- Doctor workload
-- ER triage distribution per doctor
-- Follow-up priority list for ER patients
+**1. Dashboard Operasional IGD** (brief dari Manajer Operasional)
+- Beban kerja dokter
+- Sebaran triase IGD per dokter
+- Daftar prioritas follow-up pasien IGD
 
-**2. Monthly Financial Report** (brief from the Finance Director)
-- Revenue and inpatient share per doctor
-- Monthly revenue trend by visit type
-- Cost levels and billing for self-paying patients
+**2. Laporan Keuangan Bulanan** (brief dari Direktur Keuangan)
+- Revenue dan porsi Rawat Inap per dokter
+- Tren revenue bulanan per tipe kunjungan
+- Tingkat biaya dan tagihan pasien mandiri
 
-**3. Patient Scoring and Segmentation** (brief from the Patient Services Team)
-- Patient profiles and matching programs
-- Severity score and follow-up list
-- Executive summary per age group
+**3. Scoring dan Segmentasi Pasien** (brief dari Tim Layanan Pasien)
+- Profil pasien dan program yang cocok
+- Skor keparahan dan daftar tindak lanjut
+- Ringkasan eksekutif per kelompok umur
 
 </details>
 
-## Next Up
+## Selanjutnya
 
-This portfolio is a work in progress. New projects, along with their code, will be added here as I complete them.
+Portofolio ini masih terus berkembang. Proyek baru beserta kodenya akan saya tambahkan di sini setelah selesai.
 
-## Education
+## Pendidikan
 
 **BINUS University**, Jakarta
-Bachelor of Computer Science, Database Technology
-*2024 - Present*
+S1 Ilmu Komputer, Database Technology
+*2024 - Sekarang*
 
-## Certificates
+## Sertifikat
 
 - [Relational Database V8](https://www.freecodecamp.org/certification/owen602/relational-database-v8) - freeCodeCamp *(Sep 2026)*
 
-## Contact
+## Kontak
 
 - GitHub: [@Wennskie](https://github.com/Wennskie)
 - LinkedIn: [@owenelden](https://www.linkedin.com/in/owen-elden)
