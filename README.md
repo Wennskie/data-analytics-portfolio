@@ -16,6 +16,7 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
     - [Studi Kasus Analitik Rumah Sakit](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-rumah-sakit)
     - [Studi Kasus Analitik Platform E-Learning](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-platform-e-learning)
     - [Studi Kasus Analitik Marketplace E-Commerce](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-marketplace-e-commerce)
+    - [Studi Kasus Analitik Bisnis SaaS](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-bisnis-saas)
 - [Selanjutnya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#selanjutnya)
 - [Pendidikan](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#pendidikan)
 - [Sertifikat](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#sertifikat)
@@ -171,6 +172,56 @@ Dataset-nya tidak disertakan di repositori ini. Tabel di atas menunjukkan strukt
 - Scorecard penjual
 - Cohort pelanggan berdasarkan bulan registrasi
 - Ringkasan eksekutif marketplace
+
+</details>
+
+### Studi Kasus Analitik Bisnis SaaS
+
+Studi kasus terpandu di mana saya berperan sebagai data analyst di sebuah perusahaan SaaS. Berbagai pimpinan (CEO, CFO, VP Product, dan lainnya) meminta laporan revenue, churn, dan aktivitas pengguna, lalu saya menjawabnya dengan window function.
+
+| | |
+| --- | --- |
+| **Tujuan** | Menjawab kebutuhan laporan sebuah bisnis SaaS: analisis revenue, deteksi churn, aktivitas dan retensi pengguna, serta laporan manajemen |
+| **Data** | Database SaaSKu (platform manajemen proyek fiktif) yang disediakan bersama kasusnya: 15 pengguna, 21 langganan, 35 pembayaran, 60 aktivitas, dan 20 tiket support |
+| **Tools** | SQL |
+| **Skill** | Window function (`LAG`, `RANK`, `DENSE_RANK`, `ROW_NUMBER`, `FIRST_VALUE`, `LAST_VALUE`), running total, moving average dengan frame clause, `PARTITION BY`, CTE, fungsi tanggal (`SUBSTR`, `DATEDIFF`) |
+| **Kode** | [`saas-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/saas-case-study.sql) |
+
+<details>
+<summary><b>Skema dataset (klik untuk membuka)</b></summary>
+
+| Tabel | Baris | Kolom |
+| --- | --- | --- |
+| `pengguna` | 15 | `id`, `nama`, `kota`, `email`, `tanggal_daftar` (TEXT) |
+| `langganan` | 21 | `id`, `pengguna_id`, `plan` (free, starter, pro, enterprise), `harga_bulanan`, `tanggal_mulai`, `tanggal_selesai` (NULL jika masih aktif), `status` (aktif, expired, cancelled) |
+| `pembayaran` | 35 | `id`, `pengguna_id`, `langganan_id`, `jumlah`, `metode` (transfer, kartu_kredit, ewallet), `tanggal_bayar` (TEXT) |
+| `aktivitas` | 60 | `id`, `pengguna_id`, `tipe_aktivitas` (login, buat_proyek, undang_anggota, selesai_tugas, export_laporan), `tanggal_aktivitas` (TEXT) |
+| `tiket_support` | 20 | `id`, `pengguna_id`, `kategori` (bug, fitur, billing, umum), `prioritas` (rendah, sedang, tinggi), `status` (baru, diproses, selesai), `tanggal_dibuat` (TEXT), `tanggal_selesai` (NULL jika belum selesai) |
+
+Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan struktur tabel yang dipakai oleh query.
+
+</details>
+
+<details>
+<summary><b>Tiga skenario (klik untuk membuka)</b></summary>
+
+**1. Analisis Revenue dan Churn**
+- MoM growth dengan trend
+- Ranking kontribusi revenue per pengguna
+- Gap antar pembayaran sebagai indikator churn risk
+- Revenue kumulatif dan target
+
+**2. Analisis Aktivitas dan Retensi**
+- Aktivitas bulanan per pengguna dengan ranking
+- Trend aktivitas bulanan
+- Lifecycle span pengguna
+- Top 3 pengguna paling aktif per bulan
+
+**3. Laporan Manajemen**
+- Dashboard revenue executive
+- Segmentasi plan dengan revenue share
+- Tiket support: trend dan moving average
+- Pengguna teratas per kota
 
 </details>
 
