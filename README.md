@@ -12,7 +12,9 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
 
 - [Tentang Saya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#tentang-saya)
 - [Proyek Portofolio](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#proyek-portofolio)
-  - SQL
+  - End-to-End
+    - [Analisis Penjualan Toko Fashion Online (Gayanara)](https://github.com/Wennskie/data-analytics-portfolio#analisis-penjualan-toko-fashion-online-gayanara)
+  - Studi Kasus SQL
     - [Studi Kasus Analitik Rumah Sakit](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-rumah-sakit)
     - [Studi Kasus Analitik Platform E-Learning](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-platform-e-learning)
     - [Studi Kasus Analitik Marketplace E-Commerce](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-marketplace-e-commerce)
@@ -24,9 +26,39 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
 
 ## Proyek Portofolio
 
-Setiap proyek di sini berawal dari sebuah pertanyaan dan berakhir dengan sesuatu yang benar-benar bisa dipakai untuk mengambil keputusan.
+Proyek dibagi menjadi dua: project end-to-end yang saya kerjakan dari data mentah sampai dashboard, dan studi kasus SQL dari kursus yang saya pakai untuk melatih penulisan query.
 
-### Studi Kasus Analitik Rumah Sakit
+### Project End-to-End
+
+#### Analisis Penjualan Toko Fashion Online (Gayanara)
+
+Project end-to-end pertama saya: lima tabel data mentah yang berantakan saya periksa dan bersihkan dengan SQL, lalu saya analisis untuk menjawab empat pertanyaan bisnis, dan saya sajikan dalam dashboard Power BI satu halaman beserta rekomendasinya.
+
+![Dashboard Gayanara](https://raw.githubusercontent.com/Wennskie/portfolio-projects/main/gayanara-sales-analysis/dashboard/dashboard.png)
+
+| | |
+| --- | --- |
+| **Tujuan** | Menjawab empat pertanyaan bisnis toko fashion online: tren revenue, kategori dan brand terlaris, efektivitas promo, serta cancel dan return |
+| **Data** | Dataset simulasi (perusahaan fiktif) dari Ngulik Data: 3.000 pesanan, 4.986 item, 300 produk, 800 pelanggan, dan 1.500 review (Jan 2022 – Feb 2025) |
+| **Tools** | PostgreSQL, Power BI, Excel |
+| **Skill** | Audit dan pembersihan data, cek konsistensi antartabel, primary dan foreign key, CTE, window function, agregasi, measure DAX, desain dashboard |
+| **Project** | [Folder project lengkap](https://github.com/Wennskie/portfolio-projects/tree/main/gayanara-sales-analysis) |
+
+<details>
+<summary><b>Temuan utama (klik untuk membuka)</b></summary>
+
+- Revenue naik dari Rp198,8 juta (2022) ke Rp513,2 juta (2024), dengan lonjakan terbesar di Januari 2023.
+- Promo tidak menaikkan nilai belanja: rata-rata belanja sebelum diskon hampir sama dengan pesanan tanpa promo.
+- Return tertinggi ada di Pos Indonesia (6,8%), tetapi pesanannya sedikit (161). J&T (6,0%, rata-rata 5,0%) lebih perlu diperhatikan karena volumenya terbesar, sehingga jumlah return-nya paling banyak.
+- 358 dari 800 pelanggan punya pesanan sebelum tanggal registrasinya, sehingga data registrasi tidak dipakai di analisis.
+
+</details>
+
+### Studi Kasus SQL
+
+Proyek di sini adalah latihan studi kasus dari kursus online, dikerjakan dengan dataset dan brief yang sudah disediakan. Setiap soal berawal dari satu pertanyaan bisnis dan berakhir dengan query SQL yang menjawabnya.
+
+#### Studi Kasus Analitik Rumah Sakit
 
 Studi kasus terpandu di mana saya berperan sebagai analis data rumah sakit. Tiga tim mengirimkan brief singkat, lalu saya menjawabnya dengan SQL.
 
@@ -36,7 +68,7 @@ Studi kasus terpandu di mana saya berperan sebagai analis data rumah sakit. Tiga
 | **Data** | Database rumah sakit yang disediakan bersama kasusnya: 30 pasien, 12 dokter, 55 kunjungan, dan 45 diagnosa |
 | **Tools** | SQL |
 | **Skill** | Logika kondisional (`CASE WHEN`), inner dan left join, agregasi, `HAVING`, penanganan NULL (`COALESCE`, `NULLIF`), scoring dan segmentasi |
-| **Kode** | [`hospital-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/hospital-case-study.sql) |
+| **Kode** | [`hospital-case-study.sql`](https://github.com/Wennskie/portfolio-projects/blob/main/hospital-case-study.sql) |
 
 <details>
 <summary><b>Skema dataset (klik untuk membuka)</b></summary>
@@ -72,7 +104,7 @@ Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan strukt
 
 </details>
 
-### Studi Kasus Analitik Platform E-Learning
+#### Studi Kasus Analitik Platform E-Learning
 
 Studi kasus terpandu di mana saya berperan sebagai analis baru di sebuah platform e-learning. Tiga pimpinan mengirimkan brief, lalu saya menjawabnya dengan query SQL yang menggabungkan banyak tabel.
 
@@ -82,7 +114,7 @@ Studi kasus terpandu di mana saya berperan sebagai analis baru di sebuah platfor
 | **Data** | Database platform e-learning yang disediakan bersama kasusnya: 10 mahasiswa, 5 instruktur, 4 kategori, 8 kursus, 17 pendaftaran, dan 13 review |
 | **Tools** | SQL |
 | **Skill** | Multi-table JOIN (inner dan left), anti-join, agregasi kondisional, `HAVING`, derived table dan `CROSS JOIN`, CTE, fungsi tanggal (`CAST`, `DATEDIFF`) |
-| **Kode** | [`elearning-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/elearning-case-study.sql) |
+| **Kode** | [`elearning-case-study.sql`](https://github.com/Wennskie/portfolio-projects/blob/main/elearning-case-study.sql) |
 
 <details>
 <summary><b>Skema dataset (klik untuk membuka)</b></summary>
@@ -123,7 +155,7 @@ Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan strukt
 
 </details>
 
-### Studi Kasus Analitik Marketplace E-Commerce
+#### Studi Kasus Analitik Marketplace E-Commerce
 
 Studi kasus terpandu di mana saya berperan sebagai data analyst di sebuah marketplace e-commerce. Berbagai tim (CRM, Retention, Finance, Inventory, sampai CEO) mengirimkan permintaan, lalu saya menjawabnya dengan subquery dan CTE.
 
@@ -133,7 +165,7 @@ Studi kasus terpandu di mana saya berperan sebagai data analyst di sebuah market
 | **Data** | Database marketplace e-commerce yang disediakan bersama kasusnya, berisi data pelanggan, penjual, produk, kategori, pesanan, detail pesanan, dan review |
 | **Tools** | SQL |
 | **Skill** | Subquery (di `WHERE`, `SELECT`, dan `FROM`), correlated subquery, CTE, recursive CTE, `EXISTS` dan `NOT EXISTS`, `CROSS JOIN`, running total, fungsi tanggal (`CAST`, `INTERVAL`, `strftime`) |
-| **Kode** | [`marketplace-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/marketplace-case-study.sql) |
+| **Kode** | [`marketplace-case-study.sql`](https://github.com/Wennskie/portfolio-projects/blob/main/marketplace-case-study.sql) |
 
 <details>
 <summary><b>Kolom yang dipakai (klik untuk membuka)</b></summary>
@@ -175,7 +207,7 @@ Dataset-nya tidak disertakan di repositori ini. Tabel di atas menunjukkan strukt
 
 </details>
 
-### Studi Kasus Analitik Bisnis SaaS
+#### Studi Kasus Analitik Bisnis SaaS
 
 Studi kasus terpandu di mana saya berperan sebagai data analyst di sebuah perusahaan SaaS. Berbagai pimpinan (CEO, CFO, VP Product, dan lainnya) meminta laporan revenue, churn, dan aktivitas pengguna, lalu saya menjawabnya dengan window function.
 
@@ -185,7 +217,7 @@ Studi kasus terpandu di mana saya berperan sebagai data analyst di sebuah perusa
 | **Data** | Database SaaSKu (platform manajemen proyek fiktif) yang disediakan bersama kasusnya: 15 pengguna, 21 langganan, 35 pembayaran, 60 aktivitas, dan 20 tiket support |
 | **Tools** | SQL |
 | **Skill** | Window function (`LAG`, `RANK`, `DENSE_RANK`, `ROW_NUMBER`, `FIRST_VALUE`, `LAST_VALUE`), running total, moving average dengan frame clause, `PARTITION BY`, CTE, fungsi tanggal (`SUBSTR`, `DATEDIFF`) |
-| **Kode** | [`saas-case-study.sql`](https://github.com/Wennskie/Portfolio-Projects/blob/main/saas-case-study.sql) |
+| **Kode** | [`saas-case-study.sql`](https://github.com/Wennskie/portfolio-projects/blob/main/saas-case-study.sql) |
 
 <details>
 <summary><b>Skema dataset (klik untuk membuka)</b></summary>
