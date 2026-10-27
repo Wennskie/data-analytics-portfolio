@@ -19,6 +19,8 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
     - [Studi Kasus Analitik Platform E-Learning](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-platform-e-learning)
     - [Studi Kasus Analitik Marketplace E-Commerce](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-marketplace-e-commerce)
     - [Studi Kasus Analitik Bisnis SaaS](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-bisnis-saas)
+  - Studi Kasus Excel
+    - [Studi Kasus Rekap Komisi Sales](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-rekap-komisi-sales)
 - [Selanjutnya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#selanjutnya)
 - [Pendidikan](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#pendidikan)
 - [Sertifikat](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#sertifikat)
@@ -26,7 +28,7 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
 
 ## Proyek Portofolio
 
-Proyek dibagi menjadi dua: project end-to-end yang saya kerjakan dari data mentah sampai dashboard, dan studi kasus SQL dari kursus yang saya pakai untuk melatih penulisan query.
+Proyek dibagi menjadi tiga: project end-to-end yang saya kerjakan dari data mentah sampai dashboard, serta studi kasus SQL dan Excel dari kursus yang saya pakai untuk melatih penulisan query dan rumus.
 
 ### Project End-to-End
 
@@ -257,6 +259,22 @@ Dataset-nya tidak disertakan di repositori ini. Skema di atas menunjukkan strukt
 
 </details>
 
+### Studi Kasus Excel
+
+#### Studi Kasus Rekap Komisi Sales
+
+Studi kasus terpandu di mana Sales Manager meminta rekap komisi bulanan, lalu HR meminta catatan evaluasi dan ringkasan tim. Semua permintaan dijawab dengan rumus IF dan turunannya.
+
+![Rekap Komisi](https://raw.githubusercontent.com/Wennskie/portfolio-projects/main/excel-case-studies/komisi-sales/screenshots/rekap-komisi.png)
+
+| | |
+| --- | --- |
+| **Tujuan** | Menghitung pencapaian, status, komisi bertingkat, dan bonus kehadiran tim sales, lalu menyusun catatan HR dan ringkasan tim |
+| **Data** | Data sales yang disediakan bersama kasusnya: target, realisasi, kehadiran, dan masa kerja |
+| **Tools** | Microsoft Excel |
+| **Skill** | `IFERROR`, IF bertingkat, `IFS`, `IF` dengan `AND`/`OR`, `IF` dengan `SUM` |
+| **Project** | [Folder lengkap: file Excel, screenshot, dan penjelasan rumus](https://github.com/Wennskie/portfolio-projects/tree/main/excel-case-studies/komisi-sales) |
+
 ## Selanjutnya
 
 Portofolio ini masih terus berkembang. Proyek baru beserta kodenya akan saya tambahkan di sini setelah selesai.
@@ -269,6 +287,8 @@ S1 Ilmu Komputer, Database Technology
 
 ## Sertifikat
 
+- SQL Track (5 kursus: SQL 101, Logika Kondisional, JOIN, Subquery & CTE, Window Function) - Ngulik Data *(Okt 2026)*
+- Excel Track (3 kursus: Excel 101, Rumus IF, Lookup: VLOOKUP, XLOOKUP & INDEX MATCH) - Ngulik Data *(Okt 2026)*
 - [Relational Database V8](https://www.freecodecamp.org/certification/owen602/relational-database-v8) - freeCodeCamp *(Sep 2026)*
 
 ## Kontak
