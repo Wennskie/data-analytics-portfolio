@@ -21,6 +21,7 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
     - [Studi Kasus Analitik Bisnis SaaS](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-analitik-bisnis-saas)
   - Studi Kasus Excel
     - [Studi Kasus Rekap Komisi Sales](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-rekap-komisi-sales)
+    - [Studi Kasus Payroll dan Slip Gaji](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-payroll-dan-slip-gaji)
 - [Selanjutnya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#selanjutnya)
 - [Pendidikan](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#pendidikan)
 - [Sertifikat](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#sertifikat)
@@ -274,6 +275,20 @@ Studi kasus terpandu di mana Sales Manager meminta rekap komisi bulanan, lalu HR
 | **Tools** | Microsoft Excel |
 | **Skill** | `IFERROR`, IF bertingkat, `IFS`, `IF` dengan `AND`/`OR`, `IF` dengan `SUM` |
 | **Project** | [Folder lengkap: file Excel, screenshot, dan penjelasan rumus](https://github.com/Wennskie/portfolio-projects/tree/main/excel-case-studies/komisi-sales) |
+
+#### Studi Kasus Payroll dan Slip Gaji
+
+Studi kasus terpandu di mana HR Manager meminta payroll Oktober dilengkapi dari daftar NIK, lalu dibuatkan template slip gaji yang terisi otomatis. Master karyawan dan tabel referensi ditaruh di sheet terpisah, seperti file payroll sungguhan.
+
+![Payroll Oktober](https://raw.githubusercontent.com/Wennskie/portfolio-projects/main/excel-case-studies/payroll-lookup/screenshots/payroll-oktober.png)
+
+| | |
+| --- | --- |
+| **Tujuan** | Melengkapi data karyawan dan menghitung gaji pokok, tunjangan, tunjangan masa kerja, dan bonus KPI dari tabel referensi, lalu membuat slip gaji otomatis |
+| **Data** | Data karyawan dan tabel referensi yang disediakan bersama kasusnya: master karyawan, golongan, tunjangan divisi, dan tier masa kerja serta KPI |
+| **Tools** | Microsoft Excel (Microsoft 365) |
+| **Skill** | `XLOOKUP` exact dan approximate match, lookup berantai, referensi antarsheet, penanganan data tidak ditemukan |
+| **Project** | [Folder lengkap: file Excel, screenshot, dan penjelasan rumus](https://github.com/Wennskie/portfolio-projects/tree/main/excel-case-studies/payroll-lookup) |
 
 ## Selanjutnya
 
