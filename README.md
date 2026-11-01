@@ -22,6 +22,7 @@ Saya antusias di bidang data dan ingin menerapkan kemampuan saya di dunia kerja 
   - Studi Kasus Excel
     - [Studi Kasus Rekap Komisi Sales](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-rekap-komisi-sales)
     - [Studi Kasus Payroll dan Slip Gaji](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-payroll-dan-slip-gaji)
+    - [Studi Kasus Laporan Bulanan per Cabang](https://github.com/Wennskie/data-analytics-portfolio#studi-kasus-laporan-bulanan-per-cabang)
 - [Selanjutnya](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#selanjutnya)
 - [Pendidikan](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#pendidikan)
 - [Sertifikat](https://github.com/Wennskie/data-analytics-portfolio/blob/main/README.md#sertifikat)
@@ -289,6 +290,20 @@ Studi kasus terpandu di mana HR Manager meminta payroll Oktober dilengkapi dari 
 | **Tools** | Microsoft Excel (Microsoft 365) |
 | **Skill** | `XLOOKUP` exact dan approximate match, lookup berantai, referensi antarsheet, penanganan data tidak ditemukan |
 | **Project** | [Folder lengkap: file Excel, screenshot, dan penjelasan rumus](https://github.com/Wennskie/portfolio-projects/tree/main/excel-case-studies/payroll-lookup) |
+
+#### Studi Kasus Laporan Bulanan per Cabang
+
+Studi kasus terpandu di mana Kepala Area meminta laporan penjualan Maret per cabang untuk rapat area: total penjualan, pertumbuhan, status target, penjualan per channel, dan order terbesar. Formatnya dibuat tetap, sehingga laporan bulan berikutnya cukup dibuat dengan mengganti tanggal di sel parameter.
+
+![Laporan Maret](https://raw.githubusercontent.com/Wennskie/portfolio-projects/main/excel-case-studies/laporan-cabang/screenshots/laporan-maret.png)
+
+| | |
+| --- | --- |
+| **Tujuan** | Menyusun laporan bulanan per cabang yang bisa dipakai ulang setiap bulan hanya dengan mengganti tanggal periode |
+| **Data** | 16 transaksi Februari dan Maret 2026 yang disediakan bersama kasusnya: tanggal, cabang, kategori, channel, dan penjualan |
+| **Tools** | Microsoft Excel |
+| **Skill** | `SUMIFS` dengan banyak kriteria, rentang tanggal dari sel parameter, `MAXIFS`, referensi campuran, cek silang |
+| **Project** | [Folder lengkap: file Excel, screenshot, dan penjelasan rumus](https://github.com/Wennskie/portfolio-projects/tree/main/excel-case-studies/laporan-cabang) |
 
 ## Selanjutnya
 
