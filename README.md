@@ -1,7 +1,5 @@
 <h1 align="center">Owen Elden | Data Portofolio</h1>
 
-<p align="center"><i>Dari tabel mentah menjadi jawaban yang berguna.</i></p>
-
 ## Tentang Saya
 
 Halo, saya Owen! Saya mahasiswa Ilmu Komputer di BINUS University dengan jalur Database Technology. Lewat perkuliahan dan belajar mandiri, saya membangun fondasi yang kuat dalam mengolah data, mulai dari menulis query SQL hingga mengubah tabel mentah menjadi insight yang jelas dan bermanfaat.
