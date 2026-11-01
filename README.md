@@ -318,7 +318,7 @@ S1 Ilmu Komputer, Database Technology
 ## Sertifikat
 
 - SQL Track (5 kursus: SQL 101, Logika Kondisional, JOIN, Subquery & CTE, Window Function) - Ngulik Data *(Okt 2026)*
-- Excel Track (3 kursus: Excel 101, Rumus IF, Lookup: VLOOKUP, XLOOKUP & INDEX MATCH) - Ngulik Data *(Okt 2026)*
+- Excel Track (4 kursus: Excel 101, Rumus IF, Lookup: VLOOKUP, XLOOKUP & INDEX MATCH, Rekap Data: SUMIFS & COUNTIFS) - Ngulik Data *(Okt-Nov 2026)*
 - [Relational Database V8](https://www.freecodecamp.org/certification/owen602/relational-database-v8) - freeCodeCamp *(Sep 2026)*
 
 ## Kontak
